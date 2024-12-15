@@ -539,7 +539,7 @@ class IntroductionScreenState extends State<IntroductionScreen> {
     final metrics = notification.metrics;
     if (metrics is PageMetrics && metrics.page != null) {
       if (mounted) {
-        setState(() => _currentPage = metrics.page!.toInt());
+        setState(() => _currentPage = metrics.page!.ceil());
       }
     }
     return false;
